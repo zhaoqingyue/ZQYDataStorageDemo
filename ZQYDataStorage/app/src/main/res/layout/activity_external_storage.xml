@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_external_storage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.file.ExternalStorageActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWindows">
+
+    <include layout="@layout/layout_top"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/btn_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="getDir()"/>
+
+            <TextView
+                android:id="@+id/tv_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text=""
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_files_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="getFilesDir()"/>
+
+            <TextView
+                android:id="@+id/tv_files_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text=""
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_cache_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="getCacheDir()"/>
+
+            <TextView
+                android:id="@+id/tv_cache_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text=""
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_data_directory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="getDataDirectory()"/>
+
+            <TextView
+                android:id="@+id/tv_data_directory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text=""
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

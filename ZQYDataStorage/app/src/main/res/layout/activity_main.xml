@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtq.zqydatastorage.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWindows">
+
+    <include layout="@layout/layout_top"/>
+
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SQLlite数据库"/>
+
+    <Button
+        android:id="@+id/btn_contentProvide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ContentProvider"/>
+
+    <Button
+        android:id="@+id/btn_sharedPreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SharedPreferences"/>
+
+    <Button
+        android:id="@+id/btn_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="文件存储"/>
+
+    <Button
+        android:id="@+id/btn_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="网络存储"/>
+
+    <Button
+        android:id="@+id/btn_application"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Application"/>
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        android:lineSpacingExtra="5dp"/>
+
+</LinearLayout>

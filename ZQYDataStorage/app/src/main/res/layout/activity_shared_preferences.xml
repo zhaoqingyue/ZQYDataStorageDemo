@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shared_preferences"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.sp.SharedPreferencesActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWindows">
+
+    <include layout="@layout/layout_top"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:hint="请输入用户名"/>
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="请输入密码" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="登录"/>
+
+    <Button
+        android:id="@+id/btn_md5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="MD5加密"/>
+
+    <TextView
+        android:id="@+id/tv_md5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:lineSpacingExtra="5dp"
+        android:text=""
+        android:textColor="@color/colorAccent"/>
+
+</LinearLayout>

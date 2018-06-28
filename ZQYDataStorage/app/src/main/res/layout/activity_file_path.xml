@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_path"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.file.FilePathActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWindows">
+
+    <include layout="@layout/layout_top"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="App专属文件"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="----App专属文件：那些只有该app才可以使用的文件"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="  这类文件应该是随着app删除而一起删除的，它们可以被存储在两个地方：internal storage 和 external storage 。"/>
+
+            <Button
+                android:id="@+id/btn_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="1. internal storage"/>
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="path: "
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="2. external storage"/>
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="path: "
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="App独立文件"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="----App独立文件：那些不依赖于某特定app的文件"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="  这类文件，当删除应用之后，还应该保留在手机上的，例如拍摄的照片，不应该随着删除应用而被删除掉。"/>
+
+            <Button
+                android:id="@+id/btn_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="1. getExternalStorageDirectory"/>
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="path: "
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="2. getExternalStoragePublicDirectory"/>
+
+            <TextView
+                android:id="@+id/tv_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="path: "
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingExtra="5dp"
+                android:text="  第一种方式更加灵活，可以自己指定目录，第二种方法是一个更加方便的访问Android给我们提供好的一些公共目录的方法。"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
