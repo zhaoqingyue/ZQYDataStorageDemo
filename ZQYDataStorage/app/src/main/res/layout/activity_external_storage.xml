@@ -28,15 +28,16 @@
                 android:lineSpacingExtra="5dp"
                 android:text=""/>
 
-            <Button
-                android:id="@+id/btn_dir"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="getDir()"/>
+                android:padding="10dp"
+                android:text="getExternalFilesDir()"
+                android:gravity="center"
+                android:background="@color/colorLine"/>
 
             <TextView
-                android:id="@+id/tv_dir"
+                android:id="@+id/tv_external_files_dir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -44,15 +45,17 @@
                 android:text=""
                 android:textColor="@color/colorAccent"/>
 
-            <Button
-                android:id="@+id/btn_files_dir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="getFilesDir()"/>
 
             <TextView
-                android:id="@+id/tv_files_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="getExternalCacheDir()"
+                android:gravity="center"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:id="@+id/tv_external_cache_dir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -60,15 +63,17 @@
                 android:text=""
                 android:textColor="@color/colorAccent"/>
 
-            <Button
-                android:id="@+id/btn_cache_dir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="getCacheDir()"/>
 
             <TextView
-                android:id="@+id/tv_cache_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="getExternalStorageDirectory()"
+                android:gravity="center"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:id="@+id/tv_external_storage_directory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -76,15 +81,17 @@
                 android:text=""
                 android:textColor="@color/colorAccent"/>
 
-            <Button
-                android:id="@+id/btn_data_directory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="getDataDirectory()"/>
 
             <TextView
-                android:id="@+id/tv_data_directory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="getExternalStoragePublicDirectory()"
+                android:gravity="center"
+                android:background="@color/colorLine"/>
+
+            <TextView
+                android:id="@+id/tv_external_storage_public_directory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"

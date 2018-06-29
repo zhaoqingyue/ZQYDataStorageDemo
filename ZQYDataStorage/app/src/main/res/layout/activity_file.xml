@@ -12,6 +12,14 @@
     <include layout="@layout/layout_top"/>
 
     <Button
+        android:id="@+id/btn_api"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="存储目录API"/>
+
+    <Button
         android:id="@+id/btn_internal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

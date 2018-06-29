@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".ui.activity.sp.SharedPreferencesActivity">
         </activity>
+        <activity android:name=".ui.activity.file.ApiActivity">
+        </activity>
     </application>
 
 </manifest>

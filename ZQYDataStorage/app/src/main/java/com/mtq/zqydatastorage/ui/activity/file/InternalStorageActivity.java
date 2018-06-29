@@ -28,6 +28,8 @@ public class InternalStorageActivity extends BaseActivity {
     @BindView(R.id.tv_data_directory)
     TextView tv_data_directory;
 
+    @BindView(R.id.tv_extra)
+    TextView tv_extra;
 
     @Override
     protected int getLayoutResID() {
@@ -49,8 +51,6 @@ public class InternalStorageActivity extends BaseActivity {
          * b. 如果文件的属性是私有（private），那么即使知道包名，其它app也无法访问。
          * c. 当一个应用卸载后，内部存储中的这些文件也被删除。
          * d. SharedPreferences和SQLite数据库，都是存储在内部存储空间。
-         *
-         * SharedPreferences和SQLite数据库都是存储在内部存储空间
          *
          * 注意：内部存储不是内存
          */
@@ -82,5 +82,18 @@ public class InternalStorageActivity extends BaseActivity {
         String path3 = Environment.getDataDirectory().toString();
         LogUtils.i(TAG,"data_directory= " + path3);
         tv_data_directory.setText(path3);
+
+        /**
+         * 内部存储，系统在对应的包名下创建的文件夹
+         * cache下存放缓存数据，
+         * databases下存放使用SQLite存储的数据，
+         * files下存放普通数据（log数据，json型数据等），
+         * shared_prefs下存放使用SharedPreference存放的数据。
+         */
+        tv_extra.setText("系统在对应的包名下创建的文件夹：\n" +
+                "a. cache下存放缓存数据\n" +
+                "b. databases下存放使用SQLite存储的数据\n" +
+                "c. files下存放普通数据（log数据，json型数据等）\n" +
+                "d. shared_prefs下存放使用SharedPreference存放的数据");
     }
 }

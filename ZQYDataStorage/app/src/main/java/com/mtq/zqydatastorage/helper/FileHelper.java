@@ -1,11 +1,14 @@
 package com.mtq.zqydatastorage.helper;
 
 import android.content.Context;
+import android.os.Environment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+
+import static android.os.Environment.MEDIA_MOUNTED;
 
 /**
  * Created by zhaoqy on 2018/6/27.
@@ -81,5 +84,22 @@ public class FileHelper {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String getFilePath(Context context,String dir) {
+        String directoryPath="";
+        if (MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ) {
+            // 判断外部存储是否可用
+            directoryPath =context.getExternalFilesDir(dir).getAbsolutePath();
+        }else{
+            // 没外部存储就使用内部存储
+            directoryPath=context.getFilesDir() + File.separator + dir;
+        }
+        File file = new File(directoryPath);
+        if(!file.exists()){
+            //判断文件目录是否存在
+            file.mkdirs();
+        }
+        return directoryPath;
     }
 }

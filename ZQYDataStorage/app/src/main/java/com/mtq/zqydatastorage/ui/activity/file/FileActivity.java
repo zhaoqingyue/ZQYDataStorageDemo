@@ -25,9 +25,14 @@ public class FileActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_internal, R.id.btn_external, R.id.btn_path, R.id.btn_data})
+    @OnClick({R.id.btn_api, R.id.btn_internal, R.id.btn_external, R.id.btn_path, R.id.btn_data})
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_api: {
+                Intent intent = new Intent(this, ApiActivity.class);
+                startActivity(intent);
+                break;
+            }
             case R.id.btn_internal: {
                 Intent intent = new Intent(this, InternalStorageActivity.class);
                 startActivity(intent);
