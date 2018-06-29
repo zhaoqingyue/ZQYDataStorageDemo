@@ -1,11 +1,13 @@
 package com.mtq.zqydatastorage.ui.activity.file;
 
-import android.os.Environment;
+import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.LogUtils;
 import com.mtq.zqydatastorage.R;
 import com.mtq.zqydatastorage.base.BaseActivity;
+import com.mtq.zqydatastorage.helper.FileApiHelper;
+import com.mtq.zqydatastorage.ui.adapter.ApiAdapter;
 
 import butterknife.BindView;
 
@@ -13,20 +15,28 @@ public class InternalStorageActivity extends BaseActivity {
 
     public static final String TAG = "ZQY";
 
+    @BindView(R.id.sv)
+    ScrollView sv;
+
     @BindView(R.id.tv_des)
     TextView tv_des;
 
-    @BindView(R.id.tv_dir)
-    TextView tv_dir;
+    @BindView(R.id.listView)
+    ListView listView;
 
-    @BindView(R.id.tv_files_dir)
-    TextView tv_files_dir;
+    ApiAdapter adapter;
 
-    @BindView(R.id.tv_cache_dir)
-    TextView tv_cache_dir;
-
-    @BindView(R.id.tv_data_directory)
-    TextView tv_data_directory;
+//    @BindView(R.id.tv_dir)
+//    TextView tv_dir;
+//
+//    @BindView(R.id.tv_files_dir)
+//    TextView tv_files_dir;
+//
+//    @BindView(R.id.tv_cache_dir)
+//    TextView tv_cache_dir;
+//
+//    @BindView(R.id.tv_data_directory)
+//    TextView tv_data_directory;
 
     @BindView(R.id.tv_extra)
     TextView tv_extra;
@@ -62,26 +72,31 @@ public class InternalStorageActivity extends BaseActivity {
                 "d. SharedPreferences和SQLite数据库，都是存储在内部存储空间。\n\n" +
                 "注意：内部存储不是内存。");
 
-        String path0 = getDir("zqy", MODE_PRIVATE).getAbsolutePath();
-        LogUtils.i(TAG,"dir= " + path0);
-        tv_dir.setText(path0);
+        sv.smoothScrollTo(0, 0);
+        adapter = new ApiAdapter(this, FileApiHelper.getInternalApiList());
+        listView.setAdapter(adapter);
 
-        /**
-         * 6.0以前系统：/data/data/com.mtq.zqydatastorage/files
-         *
-         * 6.0及以后系统：/data/user/0/com.mtq.zqydatastorage/files
-         */
-        String path1 = getFilesDir().getAbsolutePath();
-        LogUtils.i(TAG,"files_dir= " + path1);
-        tv_files_dir.setText(path1);
 
-        String path2 = getCacheDir().getAbsolutePath();
-        LogUtils.i(TAG,"cache_dir= " + path2);
-        tv_cache_dir.setText(path2);
-
-        String path3 = Environment.getDataDirectory().toString();
-        LogUtils.i(TAG,"data_directory= " + path3);
-        tv_data_directory.setText(path3);
+//        String path0 = getDir("zqy", MODE_PRIVATE).getAbsolutePath();
+//        LogUtils.i(TAG,"dir= " + path0);
+//        tv_dir.setText(path0);
+//
+//        /**
+//         * 6.0以前系统：/data/data/com.mtq.zqydatastorage/files
+//         *
+//         * 6.0及以后系统：/data/user/0/com.mtq.zqydatastorage/files
+//         */
+//        String path1 = getFilesDir().getAbsolutePath();
+//        LogUtils.i(TAG,"files_dir= " + path1);
+//        tv_files_dir.setText(path1);
+//
+//        String path2 = getCacheDir().getAbsolutePath();
+//        LogUtils.i(TAG,"cache_dir= " + path2);
+//        tv_cache_dir.setText(path2);
+//
+//        String path3 = Environment.getDataDirectory().toString();
+//        LogUtils.i(TAG,"data_directory= " + path3);
+//        tv_data_directory.setText(path3);
 
         /**
          * 内部存储，系统在对应的包名下创建的文件夹
@@ -91,9 +106,9 @@ public class InternalStorageActivity extends BaseActivity {
          * shared_prefs下存放使用SharedPreference存放的数据。
          */
         tv_extra.setText("系统在对应的包名下创建的文件夹：\n" +
-                "a. cache下存放缓存数据\n" +
-                "b. databases下存放使用SQLite存储的数据\n" +
-                "c. files下存放普通数据（log数据，json型数据等）\n" +
-                "d. shared_prefs下存放使用SharedPreference存放的数据");
+                "a. cache：存放缓存数据\n" +
+                "b. databases：存放使用SQLite存储的数据\n" +
+                "c. files：存放普通数据（log数据，json型数据等）\n" +
+                "d. shared_prefs：存放使用SharedPreference存放的数据");
     }
 }

@@ -6,6 +6,7 @@ package com.mtq.zqydatastorage.data.bean;
 
 public class ApiInfo {
 
+    public int no = 0;
     public String type = "";
     public String api = "";
     public String path = "";

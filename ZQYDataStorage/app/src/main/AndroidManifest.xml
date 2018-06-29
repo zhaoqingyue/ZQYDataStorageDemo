@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".ui.activity.file.ApiActivity">
         </activity>
+        <activity android:name=".ui.activity.file.ExclusiveActivity">
+        </activity>
     </application>
 
 </manifest>

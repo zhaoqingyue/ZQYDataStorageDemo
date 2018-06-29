@@ -12,6 +12,7 @@
     <include layout="@layout/layout_top"/>
 
     <ScrollView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -28,73 +29,14 @@
                 android:lineSpacingExtra="5dp"
                 android:text=""/>
 
-            <TextView
+            <com.mtq.zqydatastorage.ui.widget.ListViewForScrollView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="getDir()"
-                android:gravity="center"
-                android:background="@color/colorLine"/>
-
-            <TextView
-                android:id="@+id/tv_dir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text=""
-                android:textColor="@color/colorAccent"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="getFilesDir()"
-                android:gravity="center"
-                android:background="@color/colorLine"/>
-
-            <TextView
-                android:id="@+id/tv_files_dir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text=""
-                android:textColor="@color/colorAccent"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="getCacheDir()"
-                android:gravity="center"
-                android:background="@color/colorLine"/>
-
-            <TextView
-                android:id="@+id/tv_cache_dir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text=""
-                android:textColor="@color/colorAccent"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="getDataDirectory()"
-                android:gravity="center"
-                android:background="@color/colorLine"/>
-
-            <TextView
-                android:id="@+id/tv_data_directory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text=""
-                android:textColor="@color/colorAccent"/>
+                android:divider="@null"
+                android:paddingBottom="0dp"
+                android:paddingTop="10dp"
+                android:background="@color/colorWindows"/>
 
             <TextView
                 android:id="@+id/tv_extra"

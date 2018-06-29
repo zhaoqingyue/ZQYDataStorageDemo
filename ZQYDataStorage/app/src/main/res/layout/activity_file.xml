@@ -23,7 +23,6 @@
         android:id="@+id/btn_internal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:textAllCaps="false"
         android:text="内部存储"/>
 
@@ -42,10 +41,24 @@
         android:text="文件路径"/>
 
     <Button
+        android:id="@+id/btn_exclusive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="App专属文件"/>
+
+    <Button
+        android:id="@+id/btn_independent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="App独立文件"/>
+
+    <Button
         android:id="@+id/btn_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="数据存储"/>
+        android:text="实例"/>
 
 </LinearLayout>

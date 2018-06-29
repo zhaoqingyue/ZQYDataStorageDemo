@@ -12,6 +12,7 @@
     <include layout="@layout/layout_top"/>
 
     <ScrollView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -41,37 +42,14 @@
                 android:lineSpacingExtra="5dp"
                 android:text="  这类文件应该是随着app删除而一起删除的，它们可以被存储在两个地方：internal storage 和 external storage 。"/>
 
-            <Button
-                android:id="@+id/btn_one"
+            <com.mtq.zqydatastorage.ui.widget.ListViewForScrollView
+                android:id="@+id/exclusiveListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="1. internal storage"/>
-
-            <TextView
-                android:id="@+id/tv_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text="path: "
-                android:textColor="@color/colorAccent"/>
-
-            <Button
-                android:id="@+id/btn_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="2. external storage"/>
-
-            <TextView
-                android:id="@+id/tv_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text="path: "
-                android:textColor="@color/colorAccent"/>
+                android:divider="@null"
+                android:paddingBottom="0dp"
+                android:paddingTop="10dp"
+                android:background="@color/colorWindows"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -94,37 +72,14 @@
                 android:lineSpacingExtra="5dp"
                 android:text="  这类文件，当删除应用之后，还应该保留在手机上的，例如拍摄的照片，不应该随着删除应用而被删除掉。"/>
 
-            <Button
-                android:id="@+id/btn_three"
+            <com.mtq.zqydatastorage.ui.widget.ListViewForScrollView
+                android:id="@+id/independentListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="1. getExternalStorageDirectory"/>
-
-            <TextView
-                android:id="@+id/tv_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text="path: "
-                android:textColor="@color/colorAccent"/>
-
-            <Button
-                android:id="@+id/btn_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="2. getExternalStoragePublicDirectory"/>
-
-            <TextView
-                android:id="@+id/tv_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:lineSpacingExtra="5dp"
-                android:text="path: "
-                android:textColor="@color/colorAccent"/>
+                android:divider="@null"
+                android:paddingBottom="0dp"
+                android:paddingTop="10dp"
+                android:background="@color/colorWindows"/>
 
             <TextView
                 android:layout_width="match_parent"

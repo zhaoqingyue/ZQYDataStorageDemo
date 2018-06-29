@@ -25,7 +25,8 @@ public class FileActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_api, R.id.btn_internal, R.id.btn_external, R.id.btn_path, R.id.btn_data})
+    @OnClick({R.id.btn_api, R.id.btn_internal, R.id.btn_external, R.id.btn_path,
+            R.id.btn_exclusive, R.id.btn_independent, R.id.btn_data})
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_api: {
@@ -45,6 +46,22 @@ public class FileActivity extends BaseActivity {
             }
             case R.id.btn_path: {
                 Intent intent = new Intent(this, FilePathActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_exclusive: {
+                /**
+                 * App专属文件
+                 */
+                Intent intent = new Intent(this, ExclusiveActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_independent: {
+                /**
+                 * App独立文件
+                 */
+                Intent intent = new Intent(this, ExclusiveActivity.class);
                 startActivity(intent);
                 break;
             }
