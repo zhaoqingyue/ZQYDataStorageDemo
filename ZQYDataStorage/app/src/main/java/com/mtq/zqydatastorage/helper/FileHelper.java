@@ -23,7 +23,7 @@ public class FileHelper {
         // 创建String对象保存文件名路径
         try {
             // 创建指定路径的文件
-            File file = new File(/*Environment.getExternalStorageDirectory()*/context.getFilesDir(), fileName);
+            File file = new File(context.getFilesDir(), fileName);
             // 如果文件不存在
             if (file.exists()) {
                 // 创建新的空文件
@@ -47,7 +47,7 @@ public class FileHelper {
     public static void deletefile(Context context, String fileName) {
         try {
             // 找到文件所在的路径并删除该文件
-            File file = new File(/*Environment.getExternalStorageDirectory()*/context.getFilesDir(), fileName);
+            File file = new File(context.getFilesDir(), fileName);
             file.delete();
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class FileHelper {
     public static String readFile(Context context, String fileName) {
         try {
             // 创建文件
-            File file = new File(/*Environment.getExternalStorageDirectory()*/context.getFilesDir(), fileName);
+            File file = new File(context.getFilesDir(), fileName);
             // 创建FileInputStream对象
             FileInputStream fis = new FileInputStream(file);
             // 创建字节数组 每次缓冲1M

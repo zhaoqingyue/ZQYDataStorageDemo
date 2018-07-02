@@ -1,6 +1,5 @@
 package com.mtq.zqydatastorage.ui.activity.file;
 
-import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -8,6 +7,7 @@ import com.mtq.zqydatastorage.R;
 import com.mtq.zqydatastorage.base.BaseActivity;
 import com.mtq.zqydatastorage.helper.FileApiHelper;
 import com.mtq.zqydatastorage.ui.adapter.ApiAdapter;
+import com.mtq.zqydatastorage.ui.widget.ListViewForScrollView;
 
 import butterknife.BindView;
 
@@ -22,21 +22,9 @@ public class ExternalStorageActivity extends BaseActivity {
     TextView tv_des;
 
     @BindView(R.id.listView)
-    ListView listView;
+    ListViewForScrollView listView;
 
     ApiAdapter adapter;
-
-//    @BindView(R.id.tv_external_files_dir)
-//    TextView tv_external_files_dir;
-//
-//    @BindView(R.id.tv_external_cache_dir)
-//    TextView tv_external_cache_dir;
-//
-//    @BindView(R.id.tv_external_storage_directory)
-//    TextView tv_external_storage_directory;
-//
-//    @BindView(R.id.tv_external_storage_public_directory)
-//    TextView tv_external_storage_public_directory;
 
     @Override
     protected int getLayoutResID() {
@@ -70,24 +58,5 @@ public class ExternalStorageActivity extends BaseActivity {
         sv.smoothScrollTo(0, 0);
         adapter = new ApiAdapter(this, FileApiHelper.getExternalApiList());
         listView.setAdapter(adapter);
-
-
-        //        String path0 = getExternalFilesDir("zqy").getAbsolutePath();
-//        LogUtils.i(TAG,"external_files_dir= " + path0);
-//        tv_external_files_dir.setText(path0);
-//
-//        String path1 = getExternalCacheDir().getAbsolutePath();
-//        LogUtils.i(TAG,"external_cache_dir= " + path1);
-//        tv_external_cache_dir.setText(path1);
-//
-//        String path2 = Environment.getExternalStorageDirectory().getAbsolutePath() ;
-//        LogUtils.i(TAG,"external_storage_directory= " + path2);
-//        tv_external_storage_directory.setText(path2);
-//
-//        String path3 = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
-//        LogUtils.i(TAG,"external_storage_public_directory= " + path3);
-//        tv_external_storage_public_directory.setText(path3);
-//
-//        Environment.getRootDirectory();
     }
 }

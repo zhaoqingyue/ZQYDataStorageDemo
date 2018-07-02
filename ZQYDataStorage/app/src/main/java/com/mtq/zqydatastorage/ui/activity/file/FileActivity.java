@@ -61,8 +61,8 @@ public class FileActivity extends BaseActivity {
                 /**
                  * App独立文件
                  */
-                Intent intent = new Intent(this, ExclusiveActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, ExclusiveActivity.class);
+//                startActivity(intent);
                 break;
             }
             case R.id.btn_data: {

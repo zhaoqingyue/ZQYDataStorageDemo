@@ -133,6 +133,7 @@ public class ApiAdapter extends BaseAdapter {
 			}
 		}
 
+		LogUtils.i("ZQY", "path： " + path);
 		SpannableString ss = new SpannableString("路径：" + path);
 		ForegroundColorSpan cs = new ForegroundColorSpan(Color.parseColor("#FF4081"));
 		ss.setSpan(cs, 3, ss.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
