@@ -47,6 +47,8 @@ public class MainActivity extends BaseActivity {
                 // SQLlite数据库
 //                Intent intent = new Intent(this, CreateActivity.class);
 //                startActivity(intent);
+
+                //ComponentName cn = new ComponentName()
                 break;
             }
             case R.id.btn_contentProvide: {
